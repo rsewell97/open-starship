@@ -10,6 +10,8 @@ Runtimes are vectorised and thus extremely fast. With time steps of 0.01s, the s
 
 ## Screenshots
 
+MatPlotLib UI:
+![alt text](images/matplotlib.png)
 
 ## Pipeline
 

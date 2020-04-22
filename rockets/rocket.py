@@ -102,11 +102,6 @@ class Rocket(object):
         l = self.toLocal(self.horizonAxes)
         return Rotation.from_matrix(l).as_euler('yzx', degrees=True)
 
-    # @property
-    # def eulerVels(self):
-    #     l = self.toLocal(np.dot(self.horizonAxes, self.drot))
-    #     return Rotation.from_rotvec(l).as_euler('yzx', degrees=True)
-
     @property
     def heading(self):
         return self.localAxes[0]

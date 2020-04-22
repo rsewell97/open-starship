@@ -141,7 +141,7 @@ class Plotter(object):
                 _max = pos + max_range/2/self.zoom
 
                 if self.counter % 30 == 0:
-                    la, lo = self.obj.latLon
+                    la, lo = self.obj.latitude*np.pi/180, self.obj.longitude*np.pi/180
                     res = 30 * np.pi/180
                     u, v = np.mgrid[lo-res:lo+res:10j, 
                                     np.pi/2-la-res:np.pi/2-la+res:10j]     # u lon, v lat

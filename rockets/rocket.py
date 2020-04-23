@@ -194,12 +194,12 @@ class Rocket(object):
 
         # lift is perpendicular to ship, calculated using eqn (32): https://apps.dtic.mil/dtic/tr/fulltext/u2/603829.pdf
         lift_normal = self.normalised(np.cross(x,  np.cross(x, v)))
-        lift = lift_normal*0.1*common_factor*2*self.radius*self.height**2 * np.sin(self.attackAngle)**3
+        lift = lift_normal*0.1*common_factor* 2*self.radius*self.height * np.sin(self.attackAngle)**3
 
         # TORQUES
         # aero restoring torque
         restoring_axis = self.normalised(np.cross(x, v))
-        aero_torque = -0.05 * self.height/8 * common_factor * restoring_axis * self.finenessRatio
+        aero_torque = 0.05 * self.height/8 * common_factor * restoring_axis * self.finenessRatio
 
         # gimballing torque
         thrust_torque = np.cross(-self.height*x/2, thrust)

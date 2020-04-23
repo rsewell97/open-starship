@@ -5,7 +5,7 @@ from world import Earth, Mars
 from rockets.rocket import Rocket
 
 
-starship = Starship(planet=Earth())
+starship = Rocket(planet=Earth())
 starship.startAtApoapsis(apoapsis=100e3, periapsis=-20e3, inclination=0)
 
 plotter = Plotter(starship, time_series_plots=['eulerAngles'], 

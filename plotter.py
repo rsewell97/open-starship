@@ -5,6 +5,7 @@ import multiprocessing as mp
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import style, use
+from mpl_toolkits.mplot3d import Axes3D
 
 
 class Plotter(object):
